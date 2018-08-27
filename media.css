@@ -1,0 +1,118 @@
+/**************** @MEDIA ********************/
+@media only screen and (max-width: 600px) {
+    .right-side {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      transition: all 0.8s ease;
+    }
+    .right-side-open .card {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      margin: 5px auto;
+    }
+    .right-side-open .card-header{
+      width: 100%;
+      height: auto;
+      padding: 3px;
+    }
+    .right-side-open .card-header h3 {
+      font-size:1.3rem;
+    }
+    .right-side-open .card-body {
+      width: 100%;
+      height: auto;
+      color:#EAEDED;
+      letter-spacing: 1.5px;
+      padding: 3px;
+      border-top: 2px solid #D6DBDF;
+      font-size: 1rem;
+    }
+    .right-side-open .about {
+      list-style: none;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .right-side-open  .about li {
+      font-size: 1.1rem;
+      letter-spacing: 1.5px;
+      color:#EAEDED;
+      padding: 5px;
+      text-shadow: 0 2px 3px #515A5A;
+    }
+    .right-side-open .card-footer {
+      width: 100%;
+      height: auto;
+      letter-spacing: 1.5px;
+      font-size: 1.1rem;
+      color:#EAEDED;
+      border-top: 2px solid #D6DBDF;
+    }
+    .right-side-open {
+      position: fixed;
+      width: 100%;
+      height:70vh;
+      background-color: red;
+      top: 35%;
+      left: 0;
+      background-color: rgb(0,0,0,.2);
+      transition: all 1s ease;
+    }
+    .left-side {
+     width: 100%;
+     height: 100vh;
+     text-align: center;
+     transition: all 0.7s ease;
+     background-color: rgb(0,0,0,0.2);
+     overflow: hidden;
+   }
+    .left-side .icons {
+     width: 100%;
+     height: auto;
+   }
+   .left-side-open {
+     width: 100%;
+     height: 30vh;
+     background-color:inherit;
+     transition: all 1s ease;
+   }
+    .left-side-open .header {
+     width: 100%;
+     height: auto;
+   }
+    .left-side-open .header h1 {
+     font-size: 2rem;
+     color: #F8F9F9;
+     letter-spacing: 2px;
+     text-shadow: 0 4px 4px #515A5A;
+   }
+    .left-side-open .header p {
+     color:#EAEDED;
+     font-size: 1rem;
+     padding: 5px;
+     text-shadow: 0 2px 3px #515A5A;
+   }
+   .left-side .toggle {
+      margin: 5px auto;
+      width: 0;
+      height: 0;
+      cursor: pointer;
+      color: #F8F9F9;
+      border-right:  20px solid transparent;
+      border-left:  20px solid transparent;
+      border-top:  20px solid #F8F9F9;
+      filter: drop-shadow(0 1px 2px #515A5A);
+      opacity: 0.8;
+      transition: all 0.8s ease;
+    }
+    .left-side-open .icons {
+     display: none;
+   }
+}

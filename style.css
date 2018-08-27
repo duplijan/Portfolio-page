@@ -1,0 +1,319 @@
+/********** GLOBALS *************/
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+ .wrapper {
+   width: 100%;
+   height: 100vh;
+   background-image: url(img/2.jpg);
+   background-position: center;
+   background-repeat: no-repeat;;
+   background-size: cover;
+   opacity: 0.9;
+   overflow-x: hidden;
+   overflow-y: hidden;
+ }
+h1,h2,h3,h4,p,li,a  {
+  font-family: 'Amaranth', sans-serif;
+}
+/************ LEFT SIDE *********/
+ .left-side {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.7s ease;
+  background-color: rgb(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+.header h1 {
+  font-size: 3rem;
+  color: #F8F9F9;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 4px #515A5A;
+}
+.header p {
+  color:#EAEDED;
+  font-size: 1.2rem;
+  padding: 20px;
+  text-shadow: 0 2px 3px #515A5A;
+}
+.toggle {
+  margin: 20px auto;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  color: #F8F9F9;
+  border-top:  30px solid transparent;
+  border-bottom:  30px solid transparent;
+  border-left:  30px solid #F8F9F9;
+  filter: drop-shadow(0 1px 2px #515A5A);
+  opacity: 0.8;
+  transition: all 0.8s ease;
+}
+.toggle:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.icons {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.icons i{
+  font-size: 2rem;
+  margin: 20px;
+  color: #F8F9F9;
+  text-shadow: 0 2px 3px #515A5A;
+}
+.icons i:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/************ RIGHT SIDE *********/
+.right-side {
+ position: fixed;
+ overflow: hidden;
+ height: 100vh;
+ width: 70%;
+ top: 0;
+ right: -100%;
+ transition: all 0.8s ease;
+}
+.right-side-open {
+  width: 60%;
+  right: 0;
+  top: 0;
+  background-color: rgb(0,0,0,.2);
+  transition: all 1s ease;
+}
+.left-side-open {
+  width: 40%;
+  background-color:inherit;
+  transition: all 1s ease;
+}
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  max-height: 500px;
+  text-align: center;
+  border: 3px solid #EAEDED;
+  background-color: rgb(0,0,0,0.05);
+  padding: 10px;
+  border-radius: 4px;
+}
+.card-header {
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  margin: 10px;
+}
+.card-header h3 {
+  font-size: 2rem;
+  color: #F8F9F9;
+  letter-spacing: 1.5px;
+  text-shadow: 0 3px 4px #515A5A;
+}
+.card-body {
+  width: 100%;
+  height: 60%;
+  color:#EAEDED;
+  letter-spacing: 1.5px;
+  padding: 20px;
+  border-top: 2px solid #D6DBDF;
+  font-size: 1.2rem;
+}
+.about {
+  list-style: none;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+.about li {
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  color:#EAEDED;
+  padding: 7px;
+  text-shadow: 0 2px 3px #515A5A;
+}
+.card-footer {
+  width: 100%;
+  height: 15%;
+  padding: 20px;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  color:#EAEDED;
+  border-top: 2px solid #D6DBDF;
+}
+.card-footer .project {
+  width: 100%;
+  height: auto;
+  background: rgb(0,0,0,0.5);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+}
+.card-footer .project a {
+  text-decoration: none;
+  color:#EAEDED;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.card-footer .project:hover {
+  opacity: 0.8;
+}
+
+/***********************************************************************************/
+/********************************** FLOWERS ****************************************/
+section {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.flowers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.flowers div{
+     position: absolute;
+     display: block;
+}
+.flowers div:nth-child(1){
+  left: 10%;
+  animation: flow 30s linear infinite;
+  animation-delay: -5s;
+}
+.flowers div:nth-child(2){
+  left: 20%;
+  animation: flow 25s linear infinite;
+  animation-delay: -10s;
+}
+.flowers div:nth-child(3){
+  left: 30%;;
+  animation: flow 20s linear infinite;
+  animation-delay: -8s;
+}
+.flowers div:nth-child(4){
+  left: 40%;
+  animation: flow 22s linear infinite;
+  animation-delay: -15s;
+}
+.flowers div:nth-child(5){
+  left: 50%;
+  animation: flow 28s linear infinite;
+  animation-delay: -5s;
+}
+.flowers div:nth-child(6){
+  left: 60%;
+  animation: flow 28s linear infinite;
+  animation-delay: -3s;
+}
+.flowers div:nth-child(7){
+  left: 70%;
+  animation: flow 28s linear infinite;
+  animation-delay: -13s;
+}
+.flowers div:nth-child(8){
+  left: 80%;
+  animation: flow 28s linear infinite;
+  animation-delay: -20s;
+}
+.flowers div:nth-child(9){
+  left: 90%;
+  animation: flow 28s linear infinite;
+  animation-delay: -5s;
+}
+.flowers div:nth-child(10){
+  left: 95%;
+  animation: flow 28s linear infinite;
+  animation-delay: -15s;
+}
+.flowers div:nth-child(11){
+  left: 87%;
+  animation: flow 28s linear infinite;
+  animation-delay: -3s;
+}
+.flowers div:nth-child(12){
+  left: 77%;
+  animation: flow 28s linear infinite;
+  animation-delay: -7s;
+}
+.flowers div:nth-child(13){
+  left: 55  %;
+  animation: flow 28s linear infinite;
+  animation-delay: -15s;
+}
+.flowers div:nth-child(14){
+  left: 33%;
+  animation: flow 28s linear infinite;
+  animation-delay: -15s;
+}
+.flowers div:nth-child(15){
+  left: 22%;
+  animation: flow 28s linear infinite;
+  animation-delay: -15s;
+}
+.flowers2 {
+  transform: scale(2) rotateX(180deg);
+  filter: blur(2);
+}
+.flowers3 {
+  transform:  scale(1.5) rotateY(180deg);
+}
+.flowers4 {
+  transform: scale(0.8) rotateY(90deg);
+}
+
+
+@keyframes flow {
+  0%{
+    top: 1%;
+    transform: translateY(150%)  rotate(0deg);
+  }
+  20%{
+    transform: translateX(0%) rotate(45deg);
+  }
+  40%{
+    transform: translateY(-100%)  rotate(90deg);
+  }
+  60%{
+    transform: translateX(-250%) rotate(135deg);
+  }
+  80%{
+    transform: translateX(-50%) rotate(180deg);
+  }
+  100%{
+    transform: translateX(-100%) rotate(180deg);
+    opacity: 0;
+    top: 100%;
+  }
+}
